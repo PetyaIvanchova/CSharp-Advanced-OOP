@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+
+namespace ex6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<string> opaaa = new Queue<string>();
+
+            while (true)
+            {
+                string input = Console.ReadLine();
+                opaaa.Enqueue(input);
+                if (input == "End")
+                {
+                    break;
+                }
+                if (input == "Paid")
+                {
+                    int count = opaaa.Count;
+                    foreach (var item in opaaa)
+                    {
+                        if (count > 1)
+                        {
+                            count--;
+                            Console.WriteLine(item);
+                        }
+
+                    }
+                    opaaa.Clear();
+                }
+            }
+            Console.WriteLine($"{opaaa.Count-1} people remaining.");
+        }
+    }
+}
