@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ex5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int n = int.Parse(Console.ReadLine());
+            int rack = 1;
+            int sum = 0;
+
+            Stack<int> stack = new Stack<int>(numbers);
+
+            while (stack.Count > 0)
+            {
+                sum += stack.Peek();
+                if (sum <= n)
+                {
+                    stack.Pop();
+                }
+                else
+                {
+                    rack++;
+                    sum = 0;
+                }
+            }
+            Console.WriteLine(rack);
+
+
+
+        }
+    }
+}
