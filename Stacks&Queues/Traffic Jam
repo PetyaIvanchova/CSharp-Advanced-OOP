@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+
+namespace ex8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<string> queue = new Queue<string>();
+            int n = int.Parse(Console.ReadLine());
+            int total = 0;
+            while (true)
+            {
+                string input = Console.ReadLine();
+                if (input == "end")
+                {
+
+                    Console.WriteLine($"{total} cars passed the crossroads.");
+                    break;
+                }
+                if (input == "green")
+                {
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (queue.Count > 0)
+                        {
+                            var car = queue.Dequeue();
+                            Console.WriteLine($"{car} passed!");
+                            total++;
+                        }
+
+                    }
+                }
+                else
+                {
+                    queue.Enqueue(input);
+                }
+            }
+        }
+    }
+}
