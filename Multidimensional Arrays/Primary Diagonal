@@ -1,0 +1,42 @@
+using System;
+using System.Linq;
+
+namespace ex3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int[,] matrix = new int[n,n];
+            int sum = 0;
+
+            for (int row = 0; row < n; row++)
+            {
+                int[] rowdata = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                for (int col = 0; col < n; col++)
+                {
+                    matrix[row, col] = rowdata[col];
+                }
+            }
+            for (int row = 0; row < n; row++)
+            {
+                for (int col = 0; col < n; col++)
+                {
+                    int number = matrix[row, col];
+
+                    if (row==col)
+                    {
+                        sum += number;
+                    }
+                }
+            }
+            Console.WriteLine(sum);
+
+
+
+
+           
+        }
+    }
+}
