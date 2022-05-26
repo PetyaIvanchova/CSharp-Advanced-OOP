@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+
+namespace ex7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            HashSet<string> cars = new HashSet<string>();
+            while (true)
+            {
+                string[] command = Console.ReadLine().Split(",");
+                if (command[0]=="END")
+                {
+                    break;
+                }
+                if (command[0]=="IN")
+                {
+                    cars.Add(command[1]);
+                }
+                if (command[0]=="OUT")
+                {
+                    cars.Remove(command[1]);
+                }
+            }
+            if (cars.Count<=0)
+            {
+                Console.WriteLine("Parking Lot is Empty");
+            }
+            foreach (var item in cars)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
