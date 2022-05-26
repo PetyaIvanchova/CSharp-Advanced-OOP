@@ -1,0 +1,30 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace ex1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] numbers = Console.ReadLine().Split().ToArray();
+            Dictionary<string, int> reslut = new Dictionary<string, int>();
+            foreach (var item in numbers)
+            {
+                if (reslut.ContainsKey(item))
+                {
+                    reslut[item]++;
+                }
+                else
+                {
+                    reslut[item] = 1;
+                }
+            }
+            foreach (var item in reslut)
+            {
+                Console.WriteLine($"{item.Key} - {item.Value} times");
+            }
+        }
+    }
+}
