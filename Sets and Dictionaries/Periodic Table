@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+namespace ex3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            SortedSet<string> chem = new SortedSet<string>();
+            for (int i = 0; i < n; i++)
+            {
+                string[] elem = Console.ReadLine().Split();
+                foreach (var item in elem)
+                {
+                    chem.Add(item);
+                }
+            }
+            Console.WriteLine(string.Join(" ",chem));
+        }
+    }
+}
