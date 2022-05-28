@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+
+namespace ex6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            Dictionary<string, Dictionary<string, int>> wordrobe = new Dictionary<string, Dictionary<string, int>>();
+            for (int i = 0; i < n; i++)
+            {
+                string input = Console.ReadLine();
+                string color = input.Split(" -> ")[0];
+                if (!wordrobe.ContainsKey(color))
+                {
+                    wordrobe.Add(color,new Dictionary<string, int>());
+                }
+             
+                
+                    Dictionary<string, int> clothes = wordrobe[color];
+                
+                string[] inputclothes = input.Split(" -> ")[1].Split(",");
+                foreach (var cloth in inputclothes)
+                {
+                    if (!clothes.ContainsKey(cloth))
+                    {
+                        clothes.Add(cloth, 1);
+                    }
+                    else
+                    {
+                        clothes[cloth]++;
+                    }
+                }
+            }
+            string searcheditems = Console.ReadLine();
+            string searchedcolor = searcheditems.Split()[0];
+            string searchedcloth = searcheditems.Split()[1];
+            foreach (var item in wordrobe)
+            {
+               // Dictionary<string, int> clothes = item.Value;
+                Console.WriteLine($"{item.Key} clothes:");
+                foreach (var cloth in item.Value)
+                {
+                    if (cloth.Key==searchedcloth && item.Key==searchedcolor)
+                    {
+                        Console.WriteLine($"* {cloth.Key} - {cloth.Value} (found!)");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"* {cloth.Key} - {cloth.Value}");
+
+                    }
+                }
+            }
+
+        }
+    }
+}
