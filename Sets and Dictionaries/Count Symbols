@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+
+namespace ex5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string text = Console.ReadLine();
+            SortedDictionary<char, int> collecion = new SortedDictionary<char, int>();
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (!collecion.ContainsKey(text[i]))
+                {
+                    collecion.Add(text[i], 1);
+                }
+                else
+                {
+                    collecion[text[i]]++;
+                }
+            }
+            foreach (var item in collecion)
+            {
+                Console.WriteLine(item.Key+": "+item.Value+" time/s");
+            }
+        }
+    }
+}
