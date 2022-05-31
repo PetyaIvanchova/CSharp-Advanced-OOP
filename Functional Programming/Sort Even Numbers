@@ -1,0 +1,16 @@
+using System;
+using System.Linq;
+
+namespace ex1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = Console.ReadLine().Split(", ").Select(int.Parse).ToArray();
+            int[] ordered = numbers.Where(n => n % 2 == 0).ToArray();
+            int[] sorted = ordered.OrderBy(n => n).ToArray();
+            Console.WriteLine(string.Join(", ",sorted));
+        }
+    }
+}
