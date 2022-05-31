@@ -1,0 +1,18 @@
+using System;
+using System.Linq;
+
+namespace ex3
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string text = Console.ReadLine();
+
+            Predicate<string> isupper = (string x) => x.Length > 0 && char.IsUpper(x[0]);
+            Console.WriteLine(String.Join("\r\n",text.Split().Where(x=> isupper(x)).ToArray()));
+        
+        }
+    }
+}
