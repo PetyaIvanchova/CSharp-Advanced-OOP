@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ex4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] twonumbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            string type = Console.ReadLine();
+            List<int> result = new List<int>();
+            int start = twonumbers[0];
+            int end = twonumbers[1];
+            for (int i = start; i <= end; i++)
+            {
+                if (type == "even")
+                {
+                    if (i % 2 == 0)
+                    {
+                        result.Add(i);
+                    }
+
+                }
+                else if (type == "odd")
+                {
+                    if (!(i % 2 == 0))
+                    {
+                        result.Add(i);
+                    }
+                }
+            }
+            Console.WriteLine(string.Join(" ",result));
+        }
+    }
+}
