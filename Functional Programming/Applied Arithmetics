@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ex5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
+            string command = Console.ReadLine();
+            while (command!="end")
+            {
+                if (command=="add")
+                {
+                    Func<List<int>,List<int>> add = nubers => nubers.Select(n => n + 1).ToList();
+                    numbers = add(numbers);
+                }
+                if (command=="multiply")
+                {
+                    Func<List<int>, List<int>> multiply = numbers => numbers.Select(n => n * 2).ToList();
+                    numbers = multiply(numbers);
+                }
+                if (command=="subtract")
+                {
+                    Func<List<int>, List<int>> subtract = numbers => numbers.Select(n => n - 1).ToList();
+                    numbers = subtract(numbers);
+                }
+                if (command=="print")
+                {
+                    Action<List<int>> print = list=>Console.WriteLine(string.Join(" ",list));
+                    print(numbers);
+                }
+                command = Console.ReadLine();
+            }
+        }
+    }
+}
