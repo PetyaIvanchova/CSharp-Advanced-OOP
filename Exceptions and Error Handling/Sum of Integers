@@ -1,0 +1,46 @@
+using System;
+using System.Linq;
+
+namespace troiw4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] elements = Console.ReadLine().Split().ToArray();
+            int sum = 0;
+
+            foreach (var item in elements)
+            {
+                try
+                {
+                    int number = int.Parse(item);
+                    //if (!(char.IsDigit(item[0])))
+                    //{
+                    //    throw new FormatException();
+                    //}
+                    //  else
+                    if (!(int.Parse(item) < int.MaxValue) || (!(int.Parse(item) > int.MinValue)))
+                    {
+                        throw new OverflowException();
+                    }
+                    sum = sum + number;
+
+                }
+                catch (FormatException)
+                {
+
+                    Console.WriteLine($"The element '{item}' is in wrong format!");
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine($"The element '{item}' is out of range!");
+                }
+                finally
+                {
+                    Console.WriteLine($"Element '{item}' processed - current sum: {sum}");
+                }
+            }
+            Console.WriteLine($"The total sum of all integers is: {sum}");
+        }
+    }
