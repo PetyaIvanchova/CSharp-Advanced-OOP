@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+
+namespace Carsds
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> result = new List<string>();
+            string[] input = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var item in input)
+            {
+                try
+                {
+                    string face = (item.Split()[0]);
+                    string suit = (item.Split()[1]);
+                    if (face != "2" && face != "3" && face != "4"
+                        && face != "5" && face != "6" && face != "7"
+                        && face != "8" && face != "9" && face != "10"
+                        && face != "J" && face != "Q" && face != "K"
+                        && face != "A")
+                    {
+                        throw new Exception("Invalid card!");
+                    }
+                    if (suit != "S" && suit != "H" && suit != "D" && suit != "C")
+                    {
+                        throw new Exception("Invalid card!");
+                    }
+
+
+                    if (suit == "S")
+                    {
+                        string ad = $"[{face}{"\u2660"}]";
+
+                        result.Add(ad);
+                    }
+                    else if (suit == "H")
+                    {
+                        string ad = $"[{face}{"\u2665"}]";
+                        result.Add(ad);
+                    }
+                    else if (suit == "D")
+                    {
+                        string ad = $"[{face}{"\u2666"}]";
+                        result.Add(ad);
+                    }
+                    else if (suit == "C")
+                    {
+                        string ad = $"[{face}{"\u2663"}]";
+                        result.Add(ad);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine(ex.Message);
+                }
+
+
+
+
+
+            }
+            Console.WriteLine(string.Join(" ", result));
+
+        }
+    }
