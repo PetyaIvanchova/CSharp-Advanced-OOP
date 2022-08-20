@@ -1,15 +1,19 @@
-# CSharp-Advanced SoftUni
+# CSharp-Advanced and OPP SoftUni
 
 
-Exercise List
 Here you can find problem solutions for the following exercises:
 
-Inheritance
-Encapsulation
-Interfaces and Abstraction
-Polymorphism
-SOLID
-Reflection and Attributes
-Unit Testing
-Mocking and Test Driven Development
-Design Patterns
+1.[Defining Classes\](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Defining%20Classes)
+2.Encapsulation\
+3.Exceptions and Error Handling\
+4.Functional Programming\
+5.Generics\
+6.Inheritance\
+7.Interfaces and Abstraction\
+8.Iterators and Comparators\
+9.Multidimensional Arrays\
+10.Polymorphism\
+11.Reflection and Attributes\
+12.Sets and Dictionaries\
+13.Stacks&Queues
+
