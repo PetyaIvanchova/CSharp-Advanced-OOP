@@ -12,8 +12,9 @@ Here you can find problem solutions for the following exercises:
 7.[Interfaces and Abstraction](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Interfaces%20and%20Abstraction)\
 8.[Iterators and Comparators](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Iterators%20and%20Comparators)\
 9.[Multidimensional Arrays](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Multidimensional%20Arrays)\
-10.[Polymorphism](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Polymorphism)\
-11.[Reflection and Attributes](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Reflection%20and%20Attributes)\
-12.[Sets and Dictionaries](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Sets%20and%20Dictionaries)\
-13.[Stacks&Queues](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Stacks%26Queues)
+10.[OOP Exams](https://github.com/PetyaIvanchova/CSharp-Advanced-OOP/tree/main/OOP%20Exams)\
+11.[Polymorphism](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Polymorphism)\
+12.[Reflection and Attributes](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Reflection%20and%20Attributes)\
+13.[Sets and Dictionaries](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Sets%20and%20Dictionaries)\
+14.[Stacks&Queues](https://github.com/PetyaIvanchova/CSharp-Advanced/tree/main/Stacks%26Queues)
 
